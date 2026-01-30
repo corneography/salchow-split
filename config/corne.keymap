@@ -21,10 +21,10 @@
 
             label = "Base";
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp F     &kp P  &kp G        &kp J    &kp L  &kp U      &kp V    &kp SEMICOLON  &kp BSPC
-&kp LEFT_SHIFT  &kp A  &kp R  &kp S     &kp T  &kp D        &kp H    &kp N  &kp E      &kp I    &kp O          &kp SQT
-&kp LCTRL       &kp Z  &kp X  &kp C     &kp V  &kp B        &kp K    &kp M  &kp COMMA  &kp DOT  &kp FSLH       &kp ESC
-                              &kp LGUI  &mo 1  &kp SPACE    &kp RET  &mo 2  &kp RALT
+&kp ESCAPE      &kp Q  &kp W  &kp F     &kp P  &kp G                 &kp J    &kp L            &kp U      &kp V    &kp SEMICOLON  &kp DELETE
+&kp LEFT_SHIFT  &kp A  &kp R  &kp S     &kp T  &kp D                 &kp H    &kp N            &kp E      &kp I    &kp O          &kp BACKSPACE
+&kp LCTRL       &kp Z  &kp X  &kp C     &kp V  &kp B                 &kp K    &kp M            &kp COMMA  &kp DOT  &kp FSLH       &kp ESC
+                              &kp LGUI  &mo 1  &mt SPACE LEFT_ALT    &kp RET  &lt 2 BACKSPACE  &kp RALT
             >;
         };
 
@@ -60,7 +60,7 @@
             >;
         };
 
-        layer_3 {
+        left_arrows {
             bindings = <
 &trans  &trans  &trans          &kp UP_ARROW    &trans           &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans    &trans  &trans  &trans  &trans  &trans  &trans
@@ -69,12 +69,12 @@
             >;
         };
 
-        layer_4 {
+        gamer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &kp ESC    &kp Q   &kp W   &kp E   &kp R        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LSHFT  &kp A   &kp S   &kp D   &kp F        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LCTRL  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans  &trans  &kp SPACE    &trans  &trans  &trans
             >;
         };
 
