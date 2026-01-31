@@ -25,47 +25,64 @@
             bindings = <&select_all>;
             key-positions = <16 14>;
             layers = <0>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <50>;
         };
 
         cut_combo {
             bindings = <&cut>;
             key-positions = <16 3>;
             layers = <0>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <50>;
         };
 
         enter_combo {
             bindings = <&kp ENTER>;
             key-positions = <28 27>;
             layers = <0>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <50>;
         };
 
         undo_combo {
             bindings = <&undo>;
             key-positions = <27 26>;
             layers = <0>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <50>;
         };
 
         redo_combo {
             bindings = <&redo>;
             key-positions = <26 28>;
             layers = <0>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <50>;
         };
 
         save_combo {
             bindings = <&save>;
             key-positions = <15 14>;
             layers = <0>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <50>;
         };
 
         tab_combo {
             bindings = <&kp TAB>;
             key-positions = <16 13>;
             layers = <0>;
+            require-prior-idle-ms = <50>;
+            timeout-ms = <50>;
         };
 
         splat_combo {
             bindings = <&splat>;
             key-positions = <16 27>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <50>;
+            layers = <0>;
         };
     };
 
