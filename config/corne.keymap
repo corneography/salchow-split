@@ -31,12 +31,6 @@
             layers = <0>;
         };
 
-        paste_combo {
-            bindings = <&paste_macro>;
-            key-positions = <16 27>;
-            layers = <0>;
-        };
-
         enter_combo {
             bindings = <&kp ENTER>;
             key-positions = <28 27>;
