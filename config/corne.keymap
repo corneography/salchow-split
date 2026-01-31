@@ -62,7 +62,7 @@
         };
 
         paste_combo {
-            bindings = <&paste>;
+            bindings = <&paste_macro>;
             key-positions = <16 27>;
         };
     };
@@ -152,7 +152,7 @@
             label = "SAVE";
         };
 
-        paste: paste {
+        paste_macro: paste {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
