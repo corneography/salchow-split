@@ -61,8 +61,8 @@
             layers = <0>;
         };
 
-        paste_combo {
-            bindings = <&paste_macro>;
+        pasta_combo {
+            bindings = <&pasta>;
             key-positions = <16 27>;
         };
     };
@@ -152,7 +152,7 @@
             label = "SAVE";
         };
 
-        paste_macro: paste {
+        pasta: paste {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
