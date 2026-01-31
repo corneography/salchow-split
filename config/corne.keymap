@@ -97,20 +97,6 @@
             label = "PASTE";
         };
 
-        paste_macro: paste {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp V>,
-                <&macro_release>,
-                <&kp LCTRL>;
-
-            label = "PASTE";
-        };
-
         cut: cut {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
