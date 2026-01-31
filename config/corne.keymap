@@ -61,8 +61,8 @@
             layers = <0>;
         };
 
-        pasta_combo {
-            bindings = <&pasta>;
+        splat_combo {
+            bindings = <&splat>;
             key-positions = <16 27>;
         };
     };
@@ -152,7 +152,7 @@
             label = "SAVE";
         };
 
-        pasta: paste {
+        splat: splat {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -163,7 +163,7 @@
                 <&macro_release>,
                 <&kp LCTRL>;
 
-            label = "PASTE";
+            label = "SPLAT";
         };
     };
 
