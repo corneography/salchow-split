@@ -140,6 +140,14 @@
             require-prior-idle-ms = <30>;
             layers = <0>;
         };
+
+        lalt_combo {
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <16 38>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <30>;
+            layers = <0>;
+        };
     };
 
     macros {
@@ -268,10 +276,10 @@
 
             label = "Base";
             bindings = <
-&kp ESC             &kp Q  &kp W  &kp F     &kp P  &kp B                 &kp J    &kp L            &kp U           &kp V      &kp SEMICOLON  &kp ESC
-&mt LEFT_SHIFT TAB  &kp A  &kp R  &kp S     &kp T  &kp D                 &kp H    &kp N            &kp E           &kp I      &kp O          &kp BACKSPACE
-&kp LCTRL           &kp Z  &kp X  &kp C     &kp V  &kp B                 &kp K    &kp M            &kp DOT         &kp COMMA  &kp FSLH       &kp DELETE
-                                  &kp LGUI  &mo 1  &mt LEFT_ALT SPACE    &kp RET  &lt 2 BACKSPACE  &kp LEFT_SHIFT
+&kp ESC             &kp Q  &kp W  &kp F     &kp P        &kp B             &kp J    &kp L            &kp U      &kp V      &kp SEMICOLON  &kp ESC
+&mt LEFT_SHIFT TAB  &kp A  &kp R  &kp S     &kp T        &kp D             &kp H    &kp N            &kp E      &kp I      &kp O          &kp BACKSPACE
+&kp LCTRL           &kp Z  &kp X  &kp C     &kp V        &kp B             &kp K    &kp M            &kp DOT    &kp COMMA  &kp FSLH       &kp DELETE
+                                  &kp LGUI  &lt 1 SPACE  &kp LEFT_SHIFT    &kp RET  &lt 2 BACKSPACE  &kp LCTRL
             >;
         };
 
@@ -318,9 +326,9 @@
 
         gamer {
             bindings = <
-&trans  &kp ESC    &kp Q  &kp W   &kp E  &kp R        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LSHFT  &kp A  &kp S   &kp D  &kp F        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LCTRL  &kp Z  &kp X   &kp C  &kp V        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp ESC    &kp Q  &kp W   &kp E  &kp R        &trans  &kp N1  &kp N2  &kp N3  &trans  &trans
+&trans  &kp LSHFT  &kp A  &kp S   &kp D  &kp F        &trans  &kp N4  &kp N5  &kp N6  &trans  &trans
+&trans  &kp LCTRL  &kp Z  &kp X   &kp C  &kp V        &trans  &kp N7  &kp N8  &kp N9  &kp N0  &tog 4
                           &trans  &mo 1  &kp SPACE    &trans  &mo 2   &trans
             >;
         };
