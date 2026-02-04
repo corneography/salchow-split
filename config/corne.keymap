@@ -14,74 +14,130 @@
         compatible = "zmk,combos";
 
         copy_combo {
-            bindings = <&copy>;
+            bindings = <&kp LC(C)>;
             key-positions = <16 15>;
             layers = <0>;
-            timeout-ms = <50>;
-            require-prior-idle-ms = <50>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <30>;
         };
 
         select_all_combo {
-            bindings = <&select_all>;
+            bindings = <&kp LC(A)>;
             key-positions = <16 14>;
             layers = <0>;
-            timeout-ms = <50>;
-            require-prior-idle-ms = <50>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <30>;
         };
 
         cut_combo {
-            bindings = <&cut>;
+            bindings = <&kp LC(X)>;
             key-positions = <16 3>;
             layers = <0>;
-            timeout-ms = <50>;
-            require-prior-idle-ms = <50>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <30>;
         };
 
         enter_combo {
             bindings = <&kp ENTER>;
             key-positions = <28 27>;
             layers = <0>;
-            timeout-ms = <50>;
-            require-prior-idle-ms = <50>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <30>;
         };
 
         undo_combo {
-            bindings = <&undo>;
+            bindings = <&kp LC(Z)>;
             key-positions = <27 26>;
             layers = <0>;
-            timeout-ms = <50>;
-            require-prior-idle-ms = <50>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <30>;
         };
 
         redo_combo {
-            bindings = <&redo>;
+            bindings = <&kp LC(LS(Z))>;
             key-positions = <26 28>;
             layers = <0>;
-            timeout-ms = <50>;
-            require-prior-idle-ms = <50>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <30>;
         };
 
         save_combo {
-            bindings = <&save>;
+            bindings = <&kp LC(S)>;
             key-positions = <15 14>;
             layers = <0>;
-            timeout-ms = <50>;
-            require-prior-idle-ms = <50>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <30>;
         };
 
         tab_combo {
             bindings = <&kp TAB>;
             key-positions = <16 13>;
             layers = <0>;
-            require-prior-idle-ms = <50>;
-            timeout-ms = <50>;
+            require-prior-idle-ms = <30>;
+            timeout-ms = <30>;
         };
 
         splat_combo {
-            bindings = <&splat>;
+            bindings = <&kp LC(V)>;
             key-positions = <16 27>;
-            timeout-ms = <50>;
-            require-prior-idle-ms = <50>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <30>;
+            layers = <0>;
+        };
+
+        ctrl_backspace_combo {
+            bindings = <&kp LC(BACKSPACE)>;
+            key-positions = <19 20>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <30>;
+            layers = <0>;
+        };
+
+        pgup_combo {
+            bindings = <&kp PG_UP>;
+            key-positions = <8 7>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <30>;
+            layers = <0>;
+        };
+
+        pgdn_combo {
+            bindings = <&kp PAGE_DOWN>;
+            key-positions = <19 8>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <30>;
+            layers = <0>;
+        };
+
+        page_back {
+            bindings = <&kp LA(LEFT)>;
+            key-positions = <8 9>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <30>;
+            layers = <0>;
+        };
+
+        page_fwd {
+            bindings = <&kp LA(RIGHT)>;
+            key-positions = <7 9>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <30>;
+            layers = <0>;
+        };
+
+        new_tab {
+            bindings = <&kp LC(T)>;
+            key-positions = <20 21>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <30>;
+            layers = <0>;
+        };
+
+        close_tab {
+            bindings = <&kp LC(W)>;
+            key-positions = <21 32>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <30>;
             layers = <0>;
         };
     };
@@ -184,6 +240,20 @@
 
             label = "SPLAT";
         };
+
+        ctrl_backspace: ctrl_delete {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp BACKSPACE>,
+                <&macro_release>,
+                <&kp LCTRL>;
+
+            label = "CTRL_DELETE";
+        };
     };
 
     keymap {
@@ -198,10 +268,10 @@
 
             label = "Base";
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp F     &kp P  &kp B                 &kp J    &kp L            &kp U     &kp V      &kp SEMICOLON  &kp ESC
-&kp LEFT_SHIFT  &kp A  &kp R  &kp S     &kp T  &kp G                 &kp H    &kp N            &kp E     &kp I      &kp O          &kp BACKSPACE
-&kp LCTRL       &kp Z  &kp X  &kp C     &kp D  &kp V                 &kp K    &kp M            &kp DOT   &kp COMMA  &kp FSLH       &kp DELETE
-                              &kp LGUI  &mo 1  &mt SPACE LEFT_ALT    &kp RET  &lt 2 BACKSPACE  &kp RALT
+&kp ESC             &kp Q  &kp W  &kp F     &kp P  &kp B                 &kp J    &kp L            &kp U           &kp V      &kp SEMICOLON  &kp ESC
+&mt LEFT_SHIFT TAB  &kp A  &kp R  &kp S     &kp T  &kp D                 &kp H    &kp N            &kp E           &kp I      &kp O          &kp BACKSPACE
+&kp LCTRL           &kp Z  &kp X  &kp C     &kp V  &kp B                 &kp K    &kp M            &kp DOT         &kp COMMA  &kp FSLH       &kp DELETE
+                                  &kp LGUI  &mo 1  &mt LEFT_ALT SPACE    &kp RET  &lt 2 BACKSPACE  &kp LEFT_SHIFT
             >;
         };
 
