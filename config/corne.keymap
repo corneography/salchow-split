@@ -9,6 +9,11 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
+&mt { flavor = "tap-preferred"; };
+
+&lt {
+};
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -93,68 +98,28 @@
             layers = <0>;
         };
 
-        pgup_combo {
-            bindings = <&kp PG_UP>;
-            key-positions = <8 7>;
+        tab_left {
+            bindings = <&kp LC(TAB)>;
+            key-positions = <19 20>;
             timeout-ms = <30>;
             require-prior-idle-ms = <30>;
-            layers = <0>;
+            layers = <1>;
         };
 
-        pgdn_combo {
-            bindings = <&kp PAGE_DOWN>;
-            key-positions = <19 8>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <30>;
-            layers = <0>;
-        };
-
-        page_back {
-            bindings = <&kp LA(LEFT)>;
-            key-positions = <8 9>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <30>;
-            layers = <0>;
-        };
-
-        page_fwd {
-            bindings = <&kp LA(RIGHT)>;
-            key-positions = <7 9>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <30>;
-            layers = <0>;
-        };
-
-        new_tab {
-            bindings = <&kp LC(T)>;
+        tab_right {
+            bindings = <&kp LC(LS(TAB))>;
             key-positions = <20 21>;
             timeout-ms = <30>;
             require-prior-idle-ms = <30>;
-            layers = <0>;
+            layers = <1>;
         };
 
         close_tab {
-            bindings = <&kp LC(W)>;
-            key-positions = <21 32>;
+            bindings = <&kp LC(T)>;
+            key-positions = <21 19>;
             timeout-ms = <30>;
             require-prior-idle-ms = <30>;
-            layers = <0>;
-        };
-
-        lalt_combo {
-            bindings = <&kp LEFT_ALT>;
-            key-positions = <16 38>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <30>;
-            layers = <0>;
-        };
-
-        reopen_tab {
-            bindings = <&kp LC(LS(T))>;
-            key-positions = <21 31>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <30>;
-            layers = <0>;
+            layers = <1>;
         };
     };
 
@@ -284,10 +249,10 @@
 
             label = "Base";
             bindings = <
-&kp ESC             &kp Q  &kp W  &kp F     &kp P        &kp B             &kp J    &kp L            &kp U      &kp V      &kp SEMICOLON  &kp ESC
-&mt LEFT_SHIFT TAB  &kp A  &kp R  &kp S     &kp T        &kp D             &kp H    &kp N            &kp E      &kp I      &kp O          &kp BACKSPACE
-&kp LCTRL           &kp Z  &kp X  &kp C     &kp V        &kp B             &kp K    &kp M            &kp DOT    &kp COMMA  &kp FSLH       &kp DELETE
-                                  &kp LGUI  &lt 1 SPACE  &kp LEFT_SHIFT    &kp RET  &lt 2 BACKSPACE  &kp LCTRL
+&kp ESC             &kp Q    &kp W  &kp F     &kp P            &kp B                 &kp J                 &kp L            &kp U      &kp V      &kp SEMICOLON  &kp ESC
+&mt LEFT_SHIFT TAB  &lt 3 A  &kp R  &kp S     &kp T            &kp D                 &kp H                 &kp N            &kp E      &kp I      &kp O          &kp BACKSPACE
+&kp LCTRL           &kp Z    &kp X  &kp C     &kp V            &kp B                 &kp K                 &kp M            &kp DOT    &kp COMMA  &kp FSLH       &kp DELETE
+                                    &kp LGUI  &lt 1 BACKSPACE  &mt LEFT_ALT SPACE    &mt LEFT_SHIFT ENTER  &lt 2 BACKSPACE  &kp LCTRL
             >;
         };
 
@@ -300,10 +265,10 @@
 
             label = "Left";
             bindings = <
-&trans  &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DELETE       &trans  &trans    &kp UP  &trans     &trans  &trans
-&trans  &mo 3         &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp BACKSPACE    &trans  &kp LEFT  &kp UP  &kp RIGHT  &trans  &trans
-&trans  &kp NUMBER_0  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PERIOD       &trans  &trans    &trans  &trans     &trans  &trans
-                                    &trans        &trans        &trans           &trans  &trans    &trans
+&trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DELETE       &kp K_SCROLL_UP    &kp LC(T)  &kp UP     &kp LC(LS(T))  &trans            &trans
+&trans  &mo 3   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp BACKSPACE    &kp K_SCROLL_DOWN  &kp LEFT   &kp UP     &kp RIGHT      &kp PRINTSCREEN   &trans
+&trans  &kp N0  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PERIOD       &kp HOME           &kp PG_UP  &kp PG_DN  &kp C_AC_BACK  &kp C_AC_FORWARD  &trans
+                              &trans        &trans        &trans           &trans             &trans     &trans
             >;
         };
 
