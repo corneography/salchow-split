@@ -18,7 +18,6 @@
             key-positions = <16 15>;
             layers = <0>;
             timeout-ms = <30>;
-            require-prior-idle-ms = <30>;
         };
 
         select_all_combo {
@@ -26,7 +25,6 @@
             key-positions = <16 14>;
             layers = <0>;
             timeout-ms = <30>;
-            require-prior-idle-ms = <30>;
         };
 
         cut_combo {
@@ -34,7 +32,6 @@
             key-positions = <16 3>;
             layers = <0>;
             timeout-ms = <30>;
-            require-prior-idle-ms = <30>;
         };
 
         enter_combo {
@@ -42,7 +39,6 @@
             key-positions = <28 27>;
             layers = <0>;
             timeout-ms = <30>;
-            require-prior-idle-ms = <30>;
         };
 
         undo_combo {
@@ -50,7 +46,6 @@
             key-positions = <27 26>;
             layers = <0>;
             timeout-ms = <30>;
-            require-prior-idle-ms = <30>;
         };
 
         redo_combo {
@@ -58,7 +53,6 @@
             key-positions = <26 28>;
             layers = <0>;
             timeout-ms = <30>;
-            require-prior-idle-ms = <30>;
         };
 
         save_combo {
@@ -66,14 +60,12 @@
             key-positions = <15 14>;
             layers = <0>;
             timeout-ms = <30>;
-            require-prior-idle-ms = <30>;
         };
 
         tab_combo {
             bindings = <&kp TAB>;
-            key-positions = <16 13>;
+            key-positions = <2 3>;
             layers = <0>;
-            require-prior-idle-ms = <30>;
             timeout-ms = <30>;
         };
 
@@ -81,7 +73,6 @@
             bindings = <&kp LC(V)>;
             key-positions = <16 27>;
             timeout-ms = <30>;
-            require-prior-idle-ms = <30>;
             layers = <0>;
         };
 
@@ -89,32 +80,7 @@
             bindings = <&kp LC(BACKSPACE)>;
             key-positions = <19 20>;
             timeout-ms = <30>;
-            require-prior-idle-ms = <30>;
             layers = <0>;
-        };
-
-        tab_left {
-            bindings = <&kp LC(TAB)>;
-            key-positions = <19 20>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <30>;
-            layers = <1>;
-        };
-
-        tab_right {
-            bindings = <&kp LC(LS(TAB))>;
-            key-positions = <20 21>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <30>;
-            layers = <1>;
-        };
-
-        close_tab {
-            bindings = <&kp LC(T)>;
-            key-positions = <21 19>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <30>;
-            layers = <1>;
         };
     };
 
@@ -244,10 +210,10 @@
 
             label = "Base";
             bindings = <
-&kp ESC             &kp Q    &kp W  &kp F     &kp P            &kp B                 &kp J                 &kp L            &kp U      &kp V      &kp SEMICOLON  &kp ESC
-&mt LEFT_SHIFT TAB  &lt 3 A  &kp R  &kp S     &kp T            &kp D                 &kp H                 &kp N            &kp E      &kp I      &kp O          &kp BACKSPACE
-&kp LCTRL           &kp Z    &kp X  &kp C     &kp V            &kp B                 &kp K                 &kp M            &kp DOT    &kp COMMA  &kp FSLH       &kp DELETE
-                                    &kp LGUI  &lt 1 BACKSPACE  &mt LEFT_ALT SPACE    &mt LEFT_SHIFT ENTER  &lt 2 BACKSPACE  &kp LCTRL
+&kp ESC         &kp F    &kp R  &kp D     &kp P  &kp V                 &kp Q      &kp J            &kp U      &kp O     &kp Y      &kp DELETE
+&kp LEFT_SHIFT  &lt 3 S  &kp N  &kp T     &kp C  &kp B                 &kp DOT    &kp H            &kp E      &kp A     &kp I      &kp BACKSPACE
+&kp LCTRL       &kp Z    &kp X  &kp K     &kp G  &kp W                 &kp M      &kp L            &kp SEMI   &kp APOS  &kp COMMA  &kp ESC
+                                &kp LGUI  &mo 1  &mt LEFT_ALT SPACE    &kp ENTER  &lt 2 BACKSPACE  &kp LCTRL
             >;
         };
 
@@ -260,10 +226,10 @@
 
             label = "Left";
             bindings = <
-&trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DELETE       &kp K_SCROLL_UP    &kp LC(T)  &kp UP     &kp LC(LS(T))  &trans            &trans
-&trans  &mo 3   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp BACKSPACE    &kp K_SCROLL_DOWN  &kp LEFT   &kp UP     &kp RIGHT      &kp PRINTSCREEN   &trans
-&trans  &kp N0  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PERIOD       &kp HOME           &kp PG_UP  &kp PG_DN  &kp C_AC_BACK  &kp C_AC_FORWARD  &trans
-                              &trans        &trans        &trans           &trans             &trans     &trans
+&trans  &kp LS(LG(S))  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DELETE       &kp K_SCROLL_UP    &kp LC(T)  &kp UP     &kp LC(LS(T))  &kp LA(F4)        &trans
+&trans  &kp MINUS      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp BACKSPACE    &kp K_SCROLL_DOWN  &kp LEFT   &kp UP     &kp RIGHT      &kp LG(LS(S))     &trans
+&trans  &kp N0         &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PERIOD       &kp HOME           &kp PG_UP  &kp PG_DN  &kp C_AC_BACK  &kp C_AC_FORWARD  &trans
+                                     &trans        &trans        &trans           &trans             &trans     &trans
             >;
         };
 
@@ -294,10 +260,10 @@
 
         gamer {
             bindings = <
-&trans  &kp ESC    &kp Q  &kp W   &kp E  &kp R        &trans  &kp N1  &kp N2  &kp N3  &trans  &trans
-&trans  &kp LSHFT  &kp A  &kp S   &kp D  &kp F        &trans  &kp N4  &kp N5  &kp N6  &trans  &trans
-&trans  &kp LCTRL  &kp Z  &kp X   &kp C  &kp V        &trans  &kp N7  &kp N8  &kp N9  &kp N0  &tog 4
-                          &trans  &mo 1  &kp SPACE    &trans  &mo 2   &trans
+&trans  &kp ESC    &kp Q  &kp W   &kp E  &kp R        &trans     &kp N1  &kp N2  &kp N3  &trans  &trans
+&trans  &kp LSHFT  &kp A  &kp S   &kp D  &kp F        &trans     &kp N4  &kp N5  &kp N6  &trans  &trans
+&trans  &kp LCTRL  &kp Z  &kp X   &kp C  &kp V        &trans     &kp N7  &kp N8  &kp N9  &kp N0  &tog 4
+                          &trans  &mo 1  &kp SPACE    &kp ENTER  &mo 2   &trans
             >;
         };
     };
